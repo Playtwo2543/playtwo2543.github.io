@@ -23,8 +23,8 @@
 ---
 ## 🧑‍🎓 Vocabuary
 - [Java](java.md)
-- [local group](localgroup.md)
-- [X.5OO](X5OO.md)
+- [local-group](local-group.md)
+- [X.5OO](X500.md)
 
 ---
 ## 📜 certificate
