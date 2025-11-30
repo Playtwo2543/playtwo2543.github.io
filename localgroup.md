@@ -1,4 +1,4 @@
-![<<back to Main](README.md)
+[<<back to Main](README.md)
 
 # local group
 
