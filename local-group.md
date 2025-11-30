@@ -31,6 +31,5 @@
 ## Translate by  MySelf :
         "กลุ่มที่ถูกกำหนดให้เข้าถึงระบบต่างๆ"
 
---
-        ![lg](LG.png)
+![lg](LG.png)
         
