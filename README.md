@@ -4,7 +4,7 @@
 
 ![Badge](https://img.shields.io/badge/Aekkaphat-Daengpayon-blueviolet?style=for-the-badge)
 ![Status](https://img.shields.io/badge/No.-14-success?style=for-the-badge)
-![Student](https://img.shields.io/badge/department-informationTechnology-orange?style=for-the-badge)
+![Student](https://img.shields.io/badge/department-information+Technology-orange?style=for-the-badge)
 
 ---
 ![image](42056.jpg)
