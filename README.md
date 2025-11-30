@@ -19,14 +19,7 @@
 ## 🎓 Education
 
 
-const student = {
-    name: "Aekkaphat Daengpayon",
-    school: "SKNTC",
-    interests: ["Coding", "Technology", "Learning"],
-    currentFocus: "Developing new skills",
-    motto: "Never stop learning! 🚀"
-};
-
+-----------
 
 ---
 
