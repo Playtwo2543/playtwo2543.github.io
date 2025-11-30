@@ -24,7 +24,7 @@
 ## 🧑‍🎓 Vocabuary
 - [Java](java.md)
 - [local-group](local-group.md)
-- [X.5OO](X500.md)
+- [X.500](X500.md)
 
 ---
 ## 📜 certificate
