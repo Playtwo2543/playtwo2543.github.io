@@ -1,6 +1,6 @@
-
 # 👋 สวัสดีครับ ผม Aekkaphat Daengpayon
 ---
+
 ![Badge](https://img.shields.io/badge/Aekkaphat-Daengpayon-blueviolet?style=for-the-badge)
 ![Status](https://img.shields.io/badge/No.-14-success?style=for-the-badge)
 ![Student](https://img.shields.io/badge/department-information+Technology-orange?style=for-the-badge)
@@ -13,9 +13,8 @@
 
 ## 🎓 Education
 
-
------------
+(ยังไม่เติมจ้าาา)
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer" width="100%" />
+![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
