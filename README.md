@@ -11,7 +11,7 @@
 
 ---
 
-### 💬 About Me
+### 💬 Hey!!?!
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=28FFB6&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=100&lines=I+am+SKNTC+Student;Welcome+to+my+GitHub+Profile!)](https://git.io/typing-svg)
 
 ---
@@ -22,13 +22,10 @@
 
 ---
 
-## 🛠️ Tech Stack
-### Languages & Tools
-![Tech](https://skillicons.dev/icons?i=html,css,js,ts,react,nodejs,java,python,mysql,firebase,github,vscode&perline=8)
+## 📜 certificate
+- (ยังไม่ได้ใส่)
+
 
 ---
 
-## 📊 GitHub Stats
-
-<table>
-  <tr>
+![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
