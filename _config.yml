@@ -1,42 +1,5 @@
-title: "J_xkpz""
-description: "Cosmic Space — Personal Universe"
-markdown: kramdown
+title: "jxkpz"
 
-# ธีมหลัก (ใช้ theme พื้นฐาน แล้วตกแต่งด้วย Markdown)
-theme: jekyll-theme-cayman
-
-# เพิ่มความเป็นอวกาศให้หน้าเว็บด้วย metadata
-space_theme:
-  banner: "https://raw.githubusercontent.com/itsmetogo/img-host/main/space-banner.png"
-  accent_color: "#7fe7ff"
-  star_color: "#ffffff"
-  nebula_color: "#6d4aff"
-
-# การตั้งค่าหน้าเว็บ
-show_downloads: false
-
-# โครงสร้างนำทาง
-nav:
-  - name: "Home"
-    link: "/"
-  - name: "Galaxy Projects"
-    link: "/projects"
-  - name: "Contact"
-    link: "/contact"
-
-# ปรับแต่ง Markdown ให้รองรับสไตล์จักรวาล
-kramdown:
-  input: GFM
-  hard_wrap: false
-  syntax_highlighter: rouge
-
-# เปิดใช้งานปลั๊กอินมาตรฐาน GitHub Pages
+remote_theme: pages-themes/hacker@v0.2.0
 plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# ข้อมูลผู้เขียน
-author:
-  name: "Hey Guy"
-  tagline: "Traveler of the Digital Cosmos"
-  emoji: "🪐"
+- jekyll-remote-theme # add this line to the plugins list if you already have one
