@@ -3,7 +3,7 @@
 
 ---
 
-## 👋 Hi there, Call me **Jhenk**
+## 👋 Hi there, Call me **"Jhenk"**
 
 ![Badge](https://img.shields.io/badge/Bachelor:-Technology-blueviolet?style=for-the-badge)
 ![Status](https://img.shields.io/badge/No.-14-success?style=for-the-badge)
@@ -16,10 +16,7 @@
 
 ---
 
-## 🎓 Education
-- SKNTC — Information Technology  
-- (เพิ่มเนื้อหาตามจริงได้เลยนะครับ)
-
+# 🎓 Education
 ---
 ## 🧑‍🎓 Vocabuary
 - [Java](java.md)
