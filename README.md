@@ -28,7 +28,7 @@
 
 ---
 ## 📜 certificate
-- (ยังไม่ได้ใส่)
+[Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
 
 ---
