@@ -16,7 +16,7 @@
 
 ---
 
-## 🎓 About Me
+## 🎓 Education
 
 ```javascript
 const student = {
