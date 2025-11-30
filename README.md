@@ -6,9 +6,8 @@
 ![Status](https://img.shields.io/badge/No.-14-success?style=for-the-badge)
 ![Student](https://img.shields.io/badge/department-informationTechnology-orange?style=for-the-badge)
 
----
 
-<img src="42056.jpg" alt="Profile" width="300" style="border-radius: 50%; border: 5px solid #28FFB6; box-shadow: 0 0 20px rgba(40, 255, 182, 0.5);">
+![image](42056.jpg)
 
 ---
 
