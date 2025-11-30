@@ -1,6 +1,6 @@
 [<<back to Main](README.md)
 
-# local group
+# local-group
 
 ---
 
