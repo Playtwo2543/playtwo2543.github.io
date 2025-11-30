@@ -5,7 +5,7 @@
 
 ## 👋 Hi there, Call me **Jhenk**
 
-![Badge](https://img.shields.io/badge/Bachelor+of-Technology-blueviolet?style=for-the-badge)
+![Badge](https://img.shields.io/badge/Bachelor:-Technology-blueviolet?style=for-the-badge)
 ![Status](https://img.shields.io/badge/No.-14-success?style=for-the-badge)
 ![Student](https://img.shields.io/badge/Department-Information%20Technology-orange?style=for-the-badge)
 
