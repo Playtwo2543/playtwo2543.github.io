@@ -18,17 +18,18 @@
 
 # 🎓 Education
 ---
-## 🧑‍🎓 Vocabuary
+### 🧑‍🎓 Vocabuary
 - [Java](java.md)
 - [local-group](local-group.md)
 - [X.500](X500.md)
 
 ---
-## Lab 🧪
+### Lab 🧪
 
 - [Create Virtual Switches](CVS.md)
+  
 ---
-## 📜 certificate
+### 📜 Certificate
 [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
 
