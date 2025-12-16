@@ -32,13 +32,19 @@
 
     3.  สร้างสวิตช์ Private ชื่อ Switch 2
                 กดที่ New virtual network switch.
+
+  ![V](pic1/V.png)  
+  
                  เลือกกด Create Virtual Switch. จากนั้นตั้งชื่อ Switch 2
                  เลือก Connection type โดยเลือกที่ Private network.
                   และกด Ok.
-
+                  
   ![9n](pic1/9.png)  
 
+
+
   ---
+  
 
 ## ผลการทำ LAB
 
