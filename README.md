@@ -24,6 +24,10 @@
 - [X.500](X500.md)
 
 ---
+## Lab 🧪
+
+- [Create Virtual Switches](CVS.md)
+---
 ## 📜 certificate
 [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
