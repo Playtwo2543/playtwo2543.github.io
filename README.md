@@ -30,7 +30,7 @@
   
 ---
 ### 📜 Certificate
-[Credly](https://www.credly.com/users/jxkpz/badges#credly)
+- [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
 
 ---
