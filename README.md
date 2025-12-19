@@ -26,7 +26,7 @@
 
 ---
 ### Lab 🧪
-- [Create Virtual Switches](CVS.md)
+- [Create Virtual Switches](Create-Virtual-Switches.md)
   
 ---
 ### 📜 Certificate
