@@ -4,4 +4,4 @@
 
 ---
 
-![Ny](New-Year.png)
+![Ny](NewYear.png)
