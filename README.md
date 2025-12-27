@@ -25,14 +25,17 @@
 - [X.500](X500.md)
 
 ---
-### Lab 🧪
+### 🧪 Lab 
 - [Create Virtual Switches](Create-Virtual-Switches.md)
   
 ---
 ### 📜 Certificate
 - [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
+--- 
 
+### สวัสดีปีใหม่ 2569
+- [new year](new-year.md)
 ---
 
 ![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
