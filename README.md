@@ -32,6 +32,9 @@
 ### 📜 Certificate
 - [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
+---
+###🎉Git-Wrapped 2025 
+- [Git-Wrapped 2025](Git-wrapped-2025.md)
 --- 
 
 ### สวัสดีปีใหม่ 2569
