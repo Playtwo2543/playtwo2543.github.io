@@ -2,8 +2,6 @@
 
 ## ผ้าม่าน (Curtain)
 
-![Curtain](pic1/Curtain.jpg)
-
   ผ้าม่านเป็น Physical Security Control ที่มีลักษณะเป็น Preventative Control
   
       เหตุผลคือ...
@@ -21,3 +19,4 @@
 
 
   ---
+  ![Curtain](pic1/Curtain.jpg)
