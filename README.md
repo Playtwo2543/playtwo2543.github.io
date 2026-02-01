@@ -44,4 +44,6 @@
 ### Control Security
 - [ระบบสำรองข้อมูลในโทรศัพท์](phone-back-up.md)
 - [ผ้าม่าน](Curtain.md)
+
+---
 ![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
