@@ -42,7 +42,7 @@
 
 ---
 ### Control Security
-- [ระบบสำรองข้อมูลในโทรศัพท์](phone-back-up.md)
+- [ระบบเครื่องตัดกระแสไฟรั่ว](Breaker.md)
 - [ผ้าม่าน](Curtain.md)
 
 ---
