@@ -34,7 +34,7 @@ Yes! We have that movie...
 
 > Cross-Site Scripting (Reflected XSS via JSON)
 
-![PIC](im/IM0.png)
+![PIC](im/M0.png)
 
 เนื่องจากมีการนำข้อมูลจากผู้ใช้ไปแสดงผลในหน้าเว็บ  
 โดยไม่ผ่านการ Encode อย่างเหมาะสม
