@@ -34,7 +34,7 @@ Yes! We have that movie...
 
 > Cross-Site Scripting (Reflected XSS via JSON)
 
-![PIC1](im/IM1.png)
+![PIC0](im/IM0.png)
 
 เนื่องจากมีการนำข้อมูลจากผู้ใช้ไปแสดงผลในหน้าเว็บ  
 โดยไม่ผ่านการ Encode อย่างเหมาะสม
@@ -85,7 +85,7 @@ JSONResponse.movies[0].response;
 
 ทำการสแกนโค้ดด้วยเครื่องมือ RIPS Code Analysis Tool  
 
-![PIC3](im/IM3.png)
+![PIC1](im/IM1.png)
 
 พบการแจ้งเตือนว่าไฟล์ `xss_json.php` มีช่องโหว่ XSS
 
@@ -100,7 +100,6 @@ JSONResponse.movies[0].response;
 ## 4. จุดที่เป็นต้นเหตุของปัญหา
 
 โครงสร้างของช่องโหว่
-
 
 
 Source : $_GET["title"]
@@ -162,9 +161,6 @@ $string = json_encode(
 $data,
 JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP
 );
-
-
-![PIC5](im/IM5.png)
 
 การแก้ไขสำคัญคือ
 
