@@ -65,7 +65,7 @@ JSONResponse.movies[0].response;
 
 
 
-    /xss_json.php?title=<script>alert(1)</script>
+    ./xss_json.php?title=<script>alert(1)</script>
 
 
 ผลลัพธ์ที่เกิดขึ้น
@@ -174,14 +174,14 @@ JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP
 
 ใช้วิธีการทดสอบแบบเดียวกับก่อนแก้
 
-    /xss_json.php?title=<script>alert(1)</script>
+    ./xss_json.php?title=<script>alert(1)</script>
 
 ### ผลลัพธ์หลังแก้ไข
 
 หน้าเว็บแสดงผลเป็นข้อความธรรมดา
 
 
-    <script>alert(1)</script>??? Sorry, we don't have that movie :(
+    .<script>alert(1)</script>??? Sorry, we don't have that movie :(
 
 ![PIC6](im/IM6.png)
 
