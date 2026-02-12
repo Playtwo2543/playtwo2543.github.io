@@ -70,9 +70,6 @@ print("Hello " . $_GET["name"]);
 
 ผลการสแกนแจ้งเตือนว่า
 
-| Source | Sink | Vulnerability |
-|------|------|--------------|
-| $_GET | echo() / print() | Cross-Site Scripting |
 
 ![PIC2](im/IM2.png)
 
