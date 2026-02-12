@@ -33,23 +33,23 @@
 - [Credly](https://www.credly.com/users/jxkpz/badges#credly)
 
 ---
-###🎉Git-Wrapped 2025 
+### 🎉Git-Wrapped 2025 
 - [Git-Wrapped 2025](Git-wrapped-2025.md)
 
 --- 
-### สวัสดีปีใหม่ 2569
+### 🎁สวัสดีปีใหม่ 2569
 - [new year](new-year.md)
 
 ---
-### Control Security
+### 🪶Control Security
 - [ระบบเครื่องตัดกระแสไฟรั่ว](Breaker.md)
 - [ผ้าม่าน](Curtain.md)
 
 ---
-### PDPA in Daily Life
+### 🔏PDPA in Daily Life
 - [ป้ายบริเวณหน้า ธนาคารกรุงไทยสาขาศาลากลาง สมุทรสาคร](PDPA.md)
 
-### 
+### ☠️การจัดการช่องโหว่ 
 - [Cross-Site Scripting](Cross-Site-Scripting.md)
 ---
 ![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
