@@ -188,6 +188,8 @@ JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP
 
 ![PIC6](im/IM6.png)
 
+![PIC7](im/IM7.png)
+
 โดย
 
 - ไม่มี alert เด้งขึ้นมา
@@ -214,8 +216,6 @@ JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP
 
 Yes! We have that movie...
 
-
-![PIC7](im/IM7.png)
 
 แสดงว่า
 
