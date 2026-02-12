@@ -43,6 +43,7 @@
 ### Proof of Concept (ตัวอย่างการโจมตี)
     URL ที่ใช้โจมตี:
           /index.php?name=<script>alert(1)</script>
+          
     ผลลัพธ์: โค้ด <script>alert(1)</script> จะถูกทำงานจริงใน Browser
             แสดงว่าช่องโหว่ XSS ถูกใช้โจมตีได้สำเร็จ
 
