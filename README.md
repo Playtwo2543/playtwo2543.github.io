@@ -49,8 +49,11 @@
 ### 🔏PDPA in Daily Life
 - [ป้ายบริเวณหน้า ธนาคารกรุงไทยสาขาศาลากลาง สมุทรสาคร](PDPA.md)
 
+---
+
 ### ☠️การจัดการช่องโหว่ 
 - [Cross-Site Scripting](Cross-Site-Scripting.md)
+
 ---
 ![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
 
