@@ -57,7 +57,7 @@ JSONResponse.movies[0].response;
 
    ใช้ Payload ดังนี้
 
-        /xss_json.php?title=<script>alert(1)</script>
+        /xss_json.php?title=<script>alert.(1)</script>
 
 
 ผลลัพธ์ที่เกิดขึ้น
@@ -134,7 +134,7 @@ JSONResponse.movies[0].response;
 
 ### 7. ทดสอบหลังการแก้ไข
         ใช้วิธีการทดสอบแบบเดียวกับก่อนแก้
-                /xss_json.php?title=<script>alert(1)</script>
+                /xss_json.php?title=<script>alert.(1)</script>
         ผลลัพธ์หลังแก้ไข
                 หน้าเว็บแสดงผลเป็นข้อความธรรมดา
                 <script>alert.(1)</script>??? Sorry, we don't have that movie :(
