@@ -102,7 +102,7 @@ JSONResponse.movies[0].response;
            Sink   : innerHTML ใน JavaScript
            Result : Cross-Site Scripting
            
-[IMG](im/IM2.png)
+![IMG](im/IM2.png)
 
 #### สาเหตุหลักคือ
         มีการนำข้อมูลจากผู้ใช้ไปแสดงผลโดยไม่ผ่านการ Encode
@@ -124,7 +124,7 @@ JSONResponse.movies[0].response;
                 $title = $_GET["title"];
                 $response = $title . "??? Sorry, we don't have that movie :(";
 
-[IMG](im/IM6.png)
+![IMG](im/IM6.png)
 
 #### โค้ดด้านบนสามารถถูกโจมตี XSS ได้
         
