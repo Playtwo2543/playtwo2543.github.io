@@ -61,12 +61,12 @@
 $title = $_GET["title"];
 $response = $title . "??? Sorry, we don't have that movie :(";
 
-## ข้อมูลจาก $title ถูกนำไปแสดงผลใน JavaScript โดยตรง
+## ข้อมูลจาก $title ถูกนำไปแสดงผลใน JavaScipt โดยตรง
 
 document.getElementById("result").innerHTML =
 JSONResponse.movies[0].response;
 
-ทำให้สามารถแทรก JavaScript ได้
+ทำให้สามารถแทรก JavaScipt ได้
 
 ![PIC](im/M0.png)
 
@@ -74,11 +74,11 @@ JSONResponse.movies[0].response;
 
 ใช้ Payload ดังนี้
 
-./xss_json.php?title=<script>alert(1)</script>
+./xss_json.php?title=<scipt>alert(1)</scipt>
 
 
 ### ผลลัพธ์ที่เกิดขึ้น
-        Script ถูก execute จริงใน Browser
+        Scipt ถูก execute จริงใน Browser
         มีหน้าต่าง alert แสดงขึ้นมา
 
 แสดงว่า
@@ -99,8 +99,8 @@ JSONResponse.movies[0].response;
 ### 4. จุดที่เป็นต้นเหตุของปัญหา
   #### โครงสร้างของช่องโหว่
            Source : $_GET["title"]
-           Sink   : innerHTML ใน JavaScript
-           Result : Cross-Site Scripting
+           Sink   : innerHTML ใน JavaScipt
+           Result : Cross-Site Scipting
            
 ![IMG](im/IM2.png)
 
@@ -151,10 +151,10 @@ JSONResponse.movies[0].response;
 
 ### 7. ทดสอบหลังการแก้ไข
         ใช้วิธีการทดสอบแบบเดียวกับก่อนแก้
-                /xss_json.php?title=<script>alert(1)</script>
+                /xss_json.php?title=<scipt>alert(1)</scipt>
         ผลลัพธ์หลังแก้ไข
                 หน้าเว็บแสดงผลเป็นข้อความธรรมดา
-                <script>alert(1)</script>??? Sorry, we don't have that movie :(
+                <scipt>alert(1)</script>??? Sorry, we don't have that movie :(
 
 โดย ไม่มี alert เด้งขึ้นมา
         Script ไม่ถูก execute
