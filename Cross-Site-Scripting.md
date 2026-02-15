@@ -51,7 +51,7 @@ document.getElementById("result").innerHTML =
 JSONResponse.movies[0].response;
 ทำให้ผู้โจมตีสามารถแทรก JavaScript ได้
 
-![PIC](im/M0.png)
+![PIC1](im/IM1.png)
 
 #### การทดสอบช่องโหว่
 
