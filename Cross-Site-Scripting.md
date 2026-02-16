@@ -1,180 +1,123 @@
-[<<back to Main](README.md)
+[⬅ ย้อนกลับ](README.md)
 
-# รายงานการแก้ไขช่องโหว่ Cross-Site Scripting (XSS)
-
-ไฟล์ที่ใช้ในการทดสอบ  
-> xss_json.php  
-> Path: /var/www/html/bWAPP/xss_json.php
-
----
-
-## 1. Business Function ของระบบ
-
-หน้าการทำงานนี้มีหน้าที่หลักคือ
-
-> รับชื่อภาพยนตร์จากผู้ใช้ แล้วตอบกลับผลลัพธ์ในรูปแบบ JSON เพื่อแสดงข้อความบนหน้าเว็บ
-
-ตัวอย่างการทำงานปกติ
-
-/xss_json.php?title=IRON MAN
-
-
-ผลลัพธ์ที่ควรได้
-
-Yes! We have that movie...
-
-
-ดังนั้น Business Function ของหน้านี้คือ
-
-**“รับชื่อภาพยนตร์ และตอบกลับข้อความผลลัพธ์ในรูปแบบ JSON”**
-
----
-
-## 2. ช่องโหว่ที่พบ และการทดสอบ
-
-จากการตรวจสอบ พบว่าไฟล์นี้มีช่องโหว่ประเภท
-
-> Cross-Site Scripting (Reflected XSS via JSON)
-
-![PIC](im/M0.png)
-
-สาเหตุเกิดจากการนำข้อมูลจากผู้ใช้มาแสดงผลโดยตรงโดยไม่ Encode
-
-### โค้ดที่มีปัญหา
-
-/```php
-$title = $_GET["title"];
-$response = $title . "??? Sorry, we don't have that movie :(";
-ค่าจากผู้ใช้ถูกนำไปแสดงผลผ่าน JavaScript
-
-document.getElementById("result").innerHTML =
-JSONResponse.movies[0].response;
-ทำให้ผู้โจมตีสามารถแทรก JavaScript ได้
+# ___การจัดการช่องโหว่ Cross-Site Scripting (XSS)___  
+## เป้าหมาย: ไฟล์ index.php ในระบบ PHP Web Application ระดับความเสี่ยง: สูง (High Risk)
 
 ![PIC1](im/IM1.png)
 
-#### การทดสอบช่องโหว่
+===
 
-   ใช้ Payload ดังนี้
+# 1. ฟังก์ชันการทำงานเดิม (Business Function)
+### หน้านี้มีไว้ทำอะไร?
 
-        /xss_json.php?title=<script>alert.(1)</script>
+หน้านี้มีหน้าที่รับค่าชื่อจากผู้ใช้ผ่าน URL แล้วแสดงผลข้อความต้อนรับบนหน้าเว็บ
 
-
-ผลลัพธ์ที่เกิดขึ้น
-
-        Browser แสดง alert
-        Script ถูก execute สำเร็จ
-    แสดงว่า
-        
-        ❌ ระบบมีช่องโหว่ XSS จริง
++ การทำงาน: ระบบรับค่าจาก `$_GET["name"]` แล้วนำมาแสดงผลผ่านคำสั่ง print/echo  
++ สิ่งที่ควรจะเป็น: ระบบควรแสดงชื่อผู้ใช้เป็นข้อความธรรมดาเท่านั้น โดยไม่อนุญาตให้โค้ดทำงาน
 
 ---
 
-### 3. ตรวจสอบช่องโหว่ด้วย RIPS
-        ทำการสแกนโค้ดด้วยเครื่องมือ RIPS Code Analysis Tool
-        พบการแจ้งเตือนว่าไฟล์ xss_json.php มีช่องโหว่ XSS
-### แสดงให้เห็นว่า        
-        RIPS ตรวจพบช่องโหว่จากการใช้ $_GET
-        มีการแสดงผลโดยไม่ผ่านการ Encode
-        เป็นช่องโหว่ประเภท Reflected XSS
----
+# 2. ช่องโหว่และการทดสอบ (Vulnerability & Payload)
+### ปัญหาอยู่ที่บรรทัดไหน?
 
-### 4. จุดที่เป็นต้นเหตุของปัญหา
-  #### โครงสร้างของช่องโหว่
-           Source : $_GET["title"]
-           Sink   : innerHTML ใน JavaScript
-           Result : Cross-Site Scripting
-           
-![IMG](im/IM2.png)
+จากการตรวจสอบด้วยเครื่องมือ RIPS พบว่าแอปพลิเคชันนำข้อมูลจากผู้ใช้ไปแสดงผลโดยตรงโดยไม่ผ่านการป้องกัน
 
-#### สาเหตุหลักคือ
-        มีการนำข้อมูลจากผู้ใช้ไปแสดงผลโดยไม่ผ่านการ Encode
+#### ผลการสแกน (RIPS Output)
 
----
+> User input reaches sensitive sink  
+>> + Source: `$_GET["name"]` (รับข้อมูลจากผู้ใช้)  
+>> + Sink: `print()` / `echo` (แสดงผลลงหน้าเว็บโดยตรง)
 
-### 5. แนวทางการแก้ไข
-        หลักการสำคัญของการป้องกัน XSS คือ
-        “ห้ามนำข้อมูลจากผู้ใช้ไปแสดงผลโดยตรง ต้อง Encode ก่อนเสมอ”
+### คำอธิบายปัญหา (Root Cause Analysis)
 
-#### แนวทางที่ใช้แก้ไข
-        กรองข้อมูล input Encode ข้อมูลก่อนแสดงผล
-        ใช้ json_encode() อย่างปลอดภัย
+ช่องโหว่เกิดจากการนำข้อมูลที่ผู้ใช้ควบคุมได้ไปแสดงผลทันที ทำให้ผู้โจมตีสามารถฝัง HTML หรือ JavaScript เข้าไปในหน้าเว็บได้
+
++ รับค่าจาก URL โดยตรง (Untrusted Input)  
++ ไม่มีการ Encode หรือ Filter ก่อน Output  
++ Browser จึงตีความข้อมูลเป็นโค้ดจริง
+
+ผลที่อาจเกิดขึ้น:
+
++ เปลี่ยนหน้าตาเว็บไซต์ (Defacement)  
++ สร้างหน้า Phishing หลอกผู้ใช้  
++ ขโมย Cookie  
++ Session Hijacking (ปลอมตัวเป็นผู้ใช้)
 
 ---
 
-### 6. โค้ดที่แก้ไขเพื่อปิดช่องโหว่
-        ก่อนแก้ไข (มีช่องโหว่)
-                $title = $_GET["title"];
-                $response = $title . "??? Sorry, we don't have that movie :(";
+# 3. การพิสูจน์ช่องโหว่ (Exploitation)
+### เจาะระบบได้อย่างไร?
 
-![IMG](im/IM6.png)
+เนื่องจากระบบแสดงผลข้อมูลตรง ๆ ผู้โจมตีสามารถแทรก JavaScript ได้ทันที
 
-#### โค้ดด้านบนสามารถถูกโจมตี XSS ได้
-        
-        หลังแก้ไข (ปลอดภัย)
-                $title = htmlentities($_GET["title"], ENT_QUOTES, "UTF-8");
-                $response = $title . "??? Sorry, we don't have that movie :(";
-                        $data = array(
-                            "movies" => array(
-                                array("response" => $response)
-                    )
-                );
-                $string = json_encode(
-                    $data,
-                JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP
-                );
++ Payload:
 
-#### การแก้ไขสำคัญคือ
+`/index.php?name=<script>alert(1)</script>`
 
-        ใช้ htmlentities() เพื่อ Encode ข้อมูล
-        ใช้ json_encode() แบบปลอดภัย        
-        ไม่แสดง input ของผู้ใช้โดยตรง
+
++ การทำงาน: Browser ประมวลผล `<script>` เป็นโค้ดจริง  
++ ผลลัพธ์: Popup alert แสดงขึ้น ยืนยันว่าช่องโหว่ XSS ถูกโจมตีได้จริง
 
 ---
 
-### 7. ทดสอบหลังการแก้ไข
-        ใช้วิธีการทดสอบแบบเดียวกับก่อนแก้
-                /xss_json.php?title=<script>alert.(1)</script>
-        ผลลัพธ์หลังแก้ไข
-                หน้าเว็บแสดงผลเป็นข้อความธรรมดา
-                <script>alert.(1)</script>??? Sorry, we don't have that movie :(
+# 4. แนวทางการแก้ไข (Remediation)
+### แก้ยังไงให้ปลอดภัย?
 
-โดย ไม่มี alert เด้งขึ้นมา
-        Script ไม่ถูก execute
-แสดงว่า ✅ ช่องโหว่ XSS ถูกปิดเรียบร้อยแล้ว
+หลักการสำคัญคือ:
 
----
+> “ห้ามนำข้อมูลจากผู้ใช้ไปแสดงผลตรง ๆ ต้อง Encode ก่อนเสมอ”
 
-### 8. ทดสอบ Business Function หลังแก้ไข
-        ทดสอบการทำงานผ่าน UI ของระบบอีกครั้ง โดยผู้ใช้กรอกชื่อหนังผ่านหน้าเว็บ
-  ตัวอย่างค่าที่ระบบส่งไปยัง backend
-          
-          /xss_json.php?title=THOR
-  
-  ผลลัพธ์ที่หน้าเว็บแสดง
-        Yes! We have that movie...
+เราแก้ไขโดยใช้ `htmlentities()` เพื่อแปลงอักขระพิเศษให้ปลอดภัยก่อนแสดงผล
 
-แสดงว่า
+`print("Hello " . htmlentities($_GET["name"], ENT_QUOTES, "utf-8"));`
 
-        ระบบยังทำงานตาม Business Function เดิมได้ครบถ้วน
-        การแก้ไขไม่กระทบการทำงานของระบบ
+อธิบายการป้องกัน
+htmlentities()
+→ แปลง < > " ' & ให้เป็น HTML-safe
 
----
+ENT_QUOTES
+→ ป้องกันการแทรก quote ทั้งเดี่ยวและคู่
 
-### บทสรุป
+"utf-8"
+→ ป้องกันการ bypass ด้วย encoding
 
-        ปัญหาที่พบ:  มีช่องโหว่ Cross-Site Scripting ในไฟล์ xss_json.php
-            เกิดจากการแสดงผล input ของผู้ใช้โดยไม่ Encode
+โค้ดที่ยังไม่แก้ไข
 
-        แนวทางแก้ไข:  ใช้ htmlentities() กับข้อมูลจากผู้ใช้
-             ใช้ json_encode() แบบปลอดภัย
-             ไม่แสดงข้อมูล input โดยตรง
-        
-        ผลลัพธ์หลังแก้ไข:  ปิดช่องโหว่ XSS สำเร็จ
-                ระบบยังทำงานได้ตาม Business Function เดิม
-                ผ่านการตรวจสอบจาก RIPS
-                สูตรป้องกัน XSS โดยสรุป
-                
-                   User Input + Direct Output  = XSS ❌
-                   User Input + Encode ก่อน Output = Safe ✅
 
+ขั้นตอนการแก้ไข
+ตรวจสอบรายละเอียดจาก RIPS
+
+เชื่อมต่อ Server ผ่าน WinSCP
+
+เปิดไฟล์และแก้ไขโค้ด
+
+อัปโหลดไฟล์ใหม่แทนของเดิม
+
+
+# 5. การตรวจสอบหลังแก้ไข (Verification)
+
+แก้แล้วดีจริงไหม?
+
+## 5.1 ตรวจสอบความปลอดภัย (Security Check)
+ทดสอบ Payload เดิมอีกครั้ง:
+
+/index.php?name=<script>alert(1)</script>
+ผลลัพธ์: โค้ดถูกแสดงเป็นข้อความธรรมดา ไม่ถูกรัน
+
+## 5.2 ตรวจสอบคุณภาพโค้ด (RIPS Re-scan)
+สแกนซ้ำด้วย RIPS
+
+ผลลัพธ์: ไม่พบช่องโหว่เพิ่มเติม (No vulnerabilities found)
+
+
+
+
+## 5.3 ตรวจสอบการใช้งาน (Usability Check)
+ทดสอบการใช้งานปกติ
+
+ผลลัพธ์: ระบบยังแสดงข้อความต้อนรับตามปกติ ผู้ใช้ใช้งานได้เหมือนเดิม
+
+===
+
+# สรุป :
+การแก้ไขช่องโหว่ Cross-Site Scripting (XSS) สามารถทำได้อย่างมีประสิทธิภาพด้วยการ Encode ข้อมูลก่อนแสดงผล โดยใช้ htmlentities() ส่งผลให้โค้ดจากผู้ใช้ไม่สามารถทำงานใน Browser ได้อีกต่อไป ลดความเสี่ยงจากการโจมตีประเภท XSS และทำให้ระบบมีความปลอดภัยพร้อมใช้งานตามปกติ
