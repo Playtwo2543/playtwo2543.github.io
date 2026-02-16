@@ -88,20 +88,19 @@ ENT_QUOTES
 
 ขั้นตอนการแก้ไข
 
-![PIC6](im/IM6.png)
-
 ตรวจสอบรายละเอียดจาก RIPS
+![PIC50](im/Movr.png)
 
 เชื่อมต่อ Server ผ่าน WinSCP
 
 เปิดไฟล์และแก้ไขโค้ด
 
 อัปโหลดไฟล์ใหม่แทนของเดิม
-
+![PIC40](im/IM4.png)
 
 # 5. การตรวจสอบหลังแก้ไข (Verification)
 
-แก้แล้วดีจริงไหม?
+![PIC11](im/OKO.png)
 
 ## 5.1 ตรวจสอบความปลอดภัย (Security Check)
 ทดสอบ Payload เดิมอีกครั้ง:
@@ -115,6 +114,8 @@ ENT_QUOTES
 สแกนซ้ำด้วย RIPS
 ⬜
 ผลลัพธ์: ไม่พบช่องโหว่เพิ่มเติม (No vulnerabilities found)
+
+![PIC6](im/IM6.png)
 
 ---
 
