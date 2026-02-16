@@ -91,16 +91,17 @@ ENT_QUOTES
 ตรวจสอบรายละเอียดจาก RIPS
 ![PIC50](im/Movr.png)
 
-เชื่อมต่อ Server ผ่าน WinSCP
+เชื่อมต่อ Server ผ่าน WinSCP จากนั้น เปิดไฟล์และแก้ไขโค้ด
 
-เปิดไฟล์และแก้ไขโค้ด
+![PIC11](im/OKO.png)
 
 อัปโหลดไฟล์ใหม่แทนของเดิม
+
 ![PIC40](im/IM4.png)
 
 # 5. การตรวจสอบหลังแก้ไข (Verification)
 
-![PIC11](im/OKO.png)
+⬜
 
 ## 5.1 ตรวจสอบความปลอดภัย (Security Check)
 ทดสอบ Payload เดิมอีกครั้ง:
