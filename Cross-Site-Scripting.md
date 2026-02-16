@@ -100,6 +100,7 @@ ENT_QUOTES
 ![PIC40](im/IM4.png)
 
 # 5. การตรวจสอบหลังแก้ไข (Verification)
+พบว่าปัญหาดังกล่าวหาไปแล้ว
 
 ![PICX](im/HUNS.png)
 
