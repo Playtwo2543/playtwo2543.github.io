@@ -106,7 +106,7 @@ ENT_QUOTES
 ## 5.1 ตรวจสอบความปลอดภัย (Security Check)
 ทดสอบ Payload เดิมอีกครั้ง:
 
-![PIC8](im/Mie.png)
+![PIC8](im/BWAPP.png)
 
 /index.php?name=<script>alert(1)</script>
 ผลลัพธ์: โค้ดถูกแสดงเป็นข้อความธรรมดา ไม่ถูกรัน
@@ -122,8 +122,10 @@ ENT_QUOTES
 
 ## 5.3 ตรวจสอบการใช้งาน (Usability Check)
 ทดสอบการใช้งานปกติ
-⬜
+![PICX](im/XSSJ.png)
 ผลลัพธ์: ระบบยังแสดงข้อความต้อนรับตามปกติ ผู้ใช้ใช้งานได้เหมือนเดิม
+
+![PICXJ](im/XSSJS.png)
 
 ===
 
