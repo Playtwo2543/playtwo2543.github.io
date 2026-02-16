@@ -105,7 +105,9 @@ ENT_QUOTES
 
 ## 5.1 ตรวจสอบความปลอดภัย (Security Check)
 ทดสอบ Payload เดิมอีกครั้ง:
-![PIC6](im/Mie.png)
+
+![PIC8](im/Mie.png)
+
 /index.php?name=<script>alert(1)</script>
 ผลลัพธ์: โค้ดถูกแสดงเป็นข้อความธรรมดา ไม่ถูกรัน
 
