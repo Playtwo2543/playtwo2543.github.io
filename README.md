@@ -55,6 +55,10 @@
 - [Cross-Site Scripting](Cross-Site-Scripting.md)
 
 ---
+### 📜 แนวปฏิบัติการใช้ซีโร่ทรัสต์ (Zero Trust Guidelines)
+- [W5H1](Zero-Trust.md)
+
+---
 ![Footer Wave](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer)
 
 
